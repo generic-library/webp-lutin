@@ -614,9 +614,26 @@ with open(build_output_file) as commit:
 					#print("STD type: " + std_selected)
 					continue
 				if     len(elem) > 2 \
-				   and (    elem[-2:] == ".o"
-				         or elem[-2:] == ".a"):
-					#print(" remove : " + elem)
+				   and elem[-2:] == ".o":
+					print(">>>>>>> remove : " + elem)
+					continue;
+				if     len(elem) > 2 \
+				   and elem[-2:] == ".a":
+					tmpppppp = "webp-"+elem[3:-2]
+					if tmpppppp not in tmp_dependency_list:
+						tmp_dependency_list.append(tmpppppp)
+						print(">>>>>>> link lib : " + tmpppppp)
+					continue;
+				if     len(elem) > 3 \
+				   and elem[-3:] == ".so":
+					if     len(elem) > 12 \
+					   and elem[:12] == "/usr/lib/lib":
+						tmpppppp = elem[12:-3]
+					else:
+						tmpppppp = elem[:-3]
+					if tmpppppp not in tmp_dependency_list:
+						tmp_dependency_list.append(tmpppppp)
+						print(">>>>>>> link external lib : " + tmpppppp)
 					continue;
 				if     len(elem) > 2 \
 				   and elem[:2] == "-I":
