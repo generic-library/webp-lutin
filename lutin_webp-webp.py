@@ -131,6 +131,10 @@ def configure(target, my_module):
 	    ], export=False)
 	
 	
+	my_module.add_path([
+	    'generate/',
+	    ], export=True)
+	
 	my_module.add_flag('c', [
 	    '-DHAVE_CONFIG_H',
 	    '-DNDEBUG',
@@ -143,6 +147,8 @@ def configure(target, my_module):
 	    '-mavx2',
 	    ])
 	
+	# build in C++ mode
+	my_module.compile_version("c", 1999)
 	
 	my_module.add_depend([
 	    'cxx',

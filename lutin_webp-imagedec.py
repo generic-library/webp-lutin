@@ -66,6 +66,8 @@ def configure(target, my_module):
 	    'jpeg',
 	    'tiff',
 	    'pthread',
+	    'webp-imageioutil',
+	    'webp-webp',
 	    ])
 	return True
 

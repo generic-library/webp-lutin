@@ -66,7 +66,8 @@ def configure(target, my_module):
 	    'gif',
 	    'pthread',
 	    'm',
+	    'webp-webp',
 	    ])
-	return True
+	return False
 
 

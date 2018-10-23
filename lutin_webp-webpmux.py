@@ -57,6 +57,7 @@ def configure(target, my_module):
 	my_module.add_depend([
 	    'cxx',
 	    'pthread',
+	    'webp-webp',
 	    ])
 	return True
 

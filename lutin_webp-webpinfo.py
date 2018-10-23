@@ -63,6 +63,7 @@ def configure(target, my_module):
 	    'webp-webp',
 	    'pthread',
 	    'm',
+	    'webp-webp',
 	    ])
 	return True
 

@@ -89,6 +89,8 @@ def configure(target, my_module):
 	my_module.add_depend([
 	    'cxx',
 	    'pthread',
+	    'webp-imageioutil',
+	    'webp-webp',
 	    ])
 	return True
 
