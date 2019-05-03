@@ -171,7 +171,7 @@ def genrate_lutin_file(lib_name, list_of_files, list_of_flags, list_of_dependenc
 	
 	out = ""
 	out += "#!/usr/bin/python\n"
-	out += "import lutin.debug as debug\n"
+	out += "import realog.debug as debug\n"
 	out += "import lutin.tools as tools\n"
 	out += "import os\n"
 	out += "\n"
@@ -359,7 +359,7 @@ def genrate_lutin_file(lib_name, list_of_files, list_of_flags, list_of_dependenc
 def generate_global_include_module():
 	out = ""
 	out += "#!/usr/bin/python\n"
-	out += "import lutin.debug as debug\n"
+	out += "import realog.debug as debug\n"
 	out += "import lutin.tools as tools\n"
 	out += "import os\n"
 	out += "\n"
@@ -400,7 +400,7 @@ def generate_global_include_module():
 def generate_global_module(list_of_module):
 	out = ""
 	out += "#!/usr/bin/python\n"
-	out += "import lutin.debug as debug\n"
+	out += "import realog.debug as debug\n"
 	out += "import lutin.tools as tools\n"
 	out += "import os\n"
 	out += "\n"
